@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "o265ACgdxE09XbbY6UF+IvvPxQcB5uLq7wZ0Ea4NENgapls/gHEM1wp/NwPEIva1A/EIX6HXE7sO2qyGA6vNZg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Student.Microservice\\Student.Microservice.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\freedom.khanyile\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\freedom.khanyile\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\freedom.khanyile\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\freedom.khanyile\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\freedom.khanyile\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\freedom.khanyile\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}

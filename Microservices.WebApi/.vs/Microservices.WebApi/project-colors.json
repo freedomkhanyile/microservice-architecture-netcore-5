@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "3db718f7-4aee-44f3-844e-1ac21ea17e94": {
+      "ProjectGuid": "3db718f7-4aee-44f3-844e-1ac21ea17e94",
+      "DisplayName": "Account.Microservice",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
