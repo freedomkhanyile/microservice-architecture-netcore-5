@@ -1,3 +1,4 @@
+using Application.Microservice.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,7 +27,7 @@ namespace Application.Microservice
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            ContainerSetup.Setup(services, Configuration);
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

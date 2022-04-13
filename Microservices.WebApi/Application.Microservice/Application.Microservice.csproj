@@ -64,7 +64,6 @@
     <Folder Include="Filters\Swagger\" />
     <Folder Include="Helpers\Constants\" />
     <Folder Include="Helpers\Extensions\" />
-    <Folder Include="IoC\" />
   </ItemGroup>
 
 </Project>
