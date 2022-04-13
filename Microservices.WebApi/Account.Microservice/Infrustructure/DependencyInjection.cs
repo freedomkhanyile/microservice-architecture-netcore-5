@@ -8,12 +8,12 @@ namespace Account.Microservice.Infrustructure
     public static class DependencyInjection
     {
         public static void AddPersistance(this IServiceCollection services, IConfiguration configuration) {
-            services.AddDbContext<ApplicationDbContext>(o =>
+            services.AddDbContext<AcountDbContext>(o =>
                o.UseNpgsql(
                            configuration.GetConnectionString("DefaultConnection"),
-                                     b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
+                                     b => b.MigrationsAssembly(typeof(AcountDbContext).Assembly.FullName)));
 
-            services.AddTransient<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
+            services.AddTransient<IAccountDbContext>(provider => provider.GetRequiredService<AcountDbContext>());
         }
     }
 }
