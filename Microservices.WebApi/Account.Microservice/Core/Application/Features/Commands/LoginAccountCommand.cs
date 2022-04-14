@@ -1,4 +1,7 @@
-﻿using MediatR;
+﻿using Account.Microservice.Core.Application.Services;
+using Account.Microservice.Filters.Exceptions;
+using MediatR;
+using Microsoft.EntityFrameworkCore;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -12,9 +15,33 @@ namespace Account.Microservice.Core.Application.Features.Commands
 
     public class LoginAccountCommandHandler : IRequestHandler<LoginAccountCommand, int>
     {
-        public Task<int> Handle(LoginAccountCommand request, CancellationToken cancellationToken)
+        private readonly IAccountDbContext _context;
+        private readonly IEncryptionService _encryptionService;
+        public LoginAccountCommandHandler(IAccountDbContext context, IEncryptionService encryptionService)
         {
-            throw new System.NotImplementedException();
+            _context = context;
+            _encryptionService = encryptionService;
+        }
+
+        public async Task<int> Handle(LoginAccountCommand command, CancellationToken cancellationToken)
+        {
+            try
+            {
+                var account = await _context.Accounts.FirstOrDefaultAsync(x => x.Email == command.Email);
+
+                if (account == null) return default;
+
+                // If Google and any other third party sign-ins we dont store passwords.
+                if(command.Password != null) 
+                    if(!_encryptionService.IsValidPassword(command.Password, account.HashedPassword))
+                        return default;
+
+                return account.Id;
+            }
+            catch (System.Exception ex)
+            {
+                throw new AppException($"{nameof(LoginAccountCommand)} : {ex.Message}");
+            }
         }
     }
 }
