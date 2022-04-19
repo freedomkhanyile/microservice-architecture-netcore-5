@@ -1,3 +1,4 @@
+using Account.Microservice.Filters.Authorize;
 using Account.Microservice.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -46,11 +47,26 @@ namespace Account.Microservice
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Account.Microservice v1"));
             }
 
-            app.UseHttpsRedirection();
+            if (!env.IsDevelopment())
+            {
+                app.UseHttpsRedirection();
+
+            }             
 
             app.UseRouting();
 
+            app.UseStaticFiles(); // Helps with file management
+
+            app.UseAuthentication();
+
             app.UseAuthorization();
+
+            app.UseMiddleware<ApiKeyMiddleware>();
+
+            app.UseMiddleware<ErrorHandlerMiddleware>();
+
+            app.UseMiddleware<JwtMiddleware>();
+
 
             app.UseEndpoints(endpoints =>
             {

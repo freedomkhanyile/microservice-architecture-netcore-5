@@ -5,7 +5,32 @@
       "ProjectGuid": "3db718f7-4aee-44f3-844e-1ac21ea17e94",
       "DisplayName": "Account.Microservice",
       "ColorIndex": 0
+    },
+    "0ecde9cd-beb9-4e54-b6a1-5e5291d9b4eb": {
+      "ProjectGuid": "0ecde9cd-beb9-4e54-b6a1-5e5291d9b4eb",
+      "DisplayName": "Application.Microservice",
+      "ColorIndex": 1
+    },
+    "fe9196d0-881e-4fc4-992b-579be1b5147e": {
+      "ProjectGuid": "fe9196d0-881e-4fc4-992b-579be1b5147e",
+      "DisplayName": "Student.Microservice",
+      "ColorIndex": 2
+    },
+    "b91d8ab5-3965-49ac-9048-9ff6b6f6cefa": {
+      "ProjectGuid": "b91d8ab5-3965-49ac-9048-9ff6b6f6cefa",
+      "DisplayName": "Account.Microservices.Tests",
+      "ColorIndex": 3
+    },
+    "86567948-3994-4e83-b523-098bb3f6e887": {
+      "ProjectGuid": "86567948-3994-4e83-b523-098bb3f6e887",
+      "DisplayName": "Account.Microservices.Tests",
+      "ColorIndex": 4
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 5
 }
