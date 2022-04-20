@@ -2,6 +2,7 @@
 using Account.Microservice.Filters.Exceptions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 using System.Threading;
@@ -19,10 +20,12 @@ namespace Account.Microservice.Core.Application.Features.Commands
     {
         private readonly IAccountDbContext _context;
         private readonly ITokenService _tokenService;
-        public AuthenticateAccountCommandHandler(IAccountDbContext context, ITokenService tokenService)
+        private readonly ILogger<AuthenticateAccountCommandHandler> _logger;
+        public AuthenticateAccountCommandHandler(IAccountDbContext context, ITokenService tokenService, ILogger<AuthenticateAccountCommandHandler> logger)
         {
             _context = context;
             _tokenService = tokenService;
+            _logger = logger;
         }
 
         public async Task<int> Handle(AuthenticateAccountCommand command, CancellationToken cancellationToken)
@@ -68,7 +71,7 @@ namespace Account.Microservice.Core.Application.Features.Commands
             }
             catch (Exception ex)
             {
-
+                _logger.LogError("ERROR: {0}", ex);
                 throw new AppException(ex.Message);
             }       
         }

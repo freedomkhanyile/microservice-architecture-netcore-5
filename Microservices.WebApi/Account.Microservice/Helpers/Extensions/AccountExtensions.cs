@@ -23,18 +23,19 @@ namespace Account.Microservice.Helpers.Extensions
             };
         }
 
-        public static Enteties.Account ToEntity(this RegisterAccountCommand model) {
+        public static Enteties.Account ToEntity(this RegisterAccountCommand model)
+        {
             return new Enteties.Account
             {
                 FirstName = model.FirstName,
                 LastName = model.LastName,
-                Cellphone=model.Cellphone,
-                Email=model.Email,
+                Cellphone = model.Cellphone,
+                Email = model.Email,
                 HashedPassword = model.PasswordHash,
                 IsActive = model.IsActive,
                 OTP = model.OTP,
                 IsThirdParty = model.IsThirdParty,
-                ThirdPartyProvider =model.ThirdPartyProvider,
+                ThirdPartyProvider = model.ThirdPartyProvider,
                 CreateUserId = model.CreateUserId,
                 CreatedDate = DateTime.UtcNow.ToLocalTime(),
                 ModifyUserId = model.ModifyUserId,
@@ -43,7 +44,32 @@ namespace Account.Microservice.Helpers.Extensions
             };
         }
 
+        public static LoginAccountCommand ToCommand(this LoginAccountViewModel model)
+        {
+            return new LoginAccountCommand
+            {
+                Email = model.Username,
+                Password = model.Password
+            };
+        }
 
+        public static RegisterAccountCommand ToCommand(this RegisterAccountViewModel model)
+        {
+            return new RegisterAccountCommand
+            {
+                FirstName = model.FirstName,
+                LastName = model.LastName,
+                Cellphone = model.Cellphone,
+                Email = model.Email,
+                Password = model.Password,
+                RoleName = model.RoleName,
+                IsThirdParty = model.IsThirdParty,
+                ThirdPartyProvider = model.ThirdPartyProvider,
+                CreateUserId = model.CreateUserId,
+                ModifyUserId = model.ModifyUserId,
+                StatusId = model.StatusId
+            };
+        }
     }
 
 }

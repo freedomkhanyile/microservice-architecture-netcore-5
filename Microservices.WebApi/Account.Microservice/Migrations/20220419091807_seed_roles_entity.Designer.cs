@@ -3,15 +3,17 @@ using System;
 using Account.Microservice.Infrustructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Account.Microservice.Migrations
 {
     [DbContext(typeof(AcountDbContext))]
-    partial class AcountDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220419091807_seed_roles_entity")]
+    partial class seed_roles_entity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

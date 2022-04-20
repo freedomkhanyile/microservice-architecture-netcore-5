@@ -1,4 +1,6 @@
-﻿using Account.Microservice.Helpers.Constants;
+﻿using Account.Microservice.Filters.Exceptions;
+using Account.Microservice.Helpers.Constants;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -18,38 +20,48 @@ namespace Account.Microservice.Core.Application.Services
     public class TokenService : ITokenService
     {
         private readonly SecuritySettings _appSettings;
-        public TokenService(IOptions<SecuritySettings> appSettings)
+        private readonly ILogger<TokenService> _logger;
+        public TokenService(IOptions<SecuritySettings> appSettings, ILogger<TokenService> logger)
         {
             _appSettings = appSettings.Value;
+            _logger = logger;
         }
 
         public string BuildToken(Entities.Account model, string[] roles, DateTime expireDateTime)
         {
-            var handler = new JwtSecurityTokenHandler();
+            try
+            {
+                var handler = new JwtSecurityTokenHandler();
 
 
-            var claims = new[] {
+                var claims = new[] {
                 new Claim("id", model.Id.ToString()),
                 new Claim(ClaimTypes.Name, model.Email)
             }.ToList();
 
-            claims.AddRange(roles.Select(role =>
-                                 new Claim(ClaimTypes.Role, role)).ToList());
+                claims.AddRange(roles.Select(role =>
+                                     new Claim(ClaimTypes.Role, role)).ToList());
 
-            var identity = new ClaimsIdentity(claims);
+                var identity = new ClaimsIdentity(claims);
 
-            var key = Encoding.ASCII.GetBytes(_appSettings.AppSecret);
+                var key = Encoding.ASCII.GetBytes(_appSettings.AppSecret);
 
-            var signingKey = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature);
+                var signingKey = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature);
 
-            var securityToken = handler.CreateToken(new SecurityTokenDescriptor
+                var securityToken = handler.CreateToken(new SecurityTokenDescriptor
+                {
+                    SigningCredentials = signingKey,
+                    Subject = identity,
+                    Expires = expireDateTime
+                });
+
+                return handler.WriteToken(securityToken);
+            }
+            catch (Exception ex)
             {
-                SigningCredentials = signingKey,
-                Subject = identity,
-                Expires = expireDateTime
-            });
-
-            return handler.WriteToken(securityToken);
+                _logger.LogError("ERROR: {0}", ex);
+                throw new AppException(ex.Message);
+            }
         }
 
         public int? ValidateToken(string token)

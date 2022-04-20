@@ -9,9 +9,10 @@ namespace Account.Microservice.Core.Application
 {
     public static class DependencyInjection
     {
-        public static void AddApplication(IServiceCollection services, IConfiguration configuration) {
+        public static void AddApplication(this IServiceCollection services, IConfiguration configuration) {
 
             services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddServices();
         }
 
         public static void AddServices(this IServiceCollection services) {

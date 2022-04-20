@@ -1,5 +1,6 @@
 ﻿using Account.Microservice.Core.Application;
 using Account.Microservice.Core.Domain.Entities;
+using Account.Microservice.Helpers.Extensions;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
@@ -15,5 +16,10 @@ namespace Account.Microservice.Infrustructure
         public DbSet<AccountRole> AccountRoles { get; set; }
         public DbSet<Role> Roles { get; set; }
         public async Task<int> SaveChangesAsync() { return await base.SaveChangesAsync(); }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Seed();
+        }
     }
 }
