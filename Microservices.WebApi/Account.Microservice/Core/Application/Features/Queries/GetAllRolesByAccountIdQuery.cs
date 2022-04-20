@@ -41,7 +41,7 @@ namespace Account.Microservice.Core.Application.Features.Queries
 
                 if (roleIds.Any())
                 {
-                    var roles = await _context.Roles
+                    var roles = await _context.Roles                        
                         .Where(x => roleIds.Contains(x.Id))
                         .ToArrayAsync();
 

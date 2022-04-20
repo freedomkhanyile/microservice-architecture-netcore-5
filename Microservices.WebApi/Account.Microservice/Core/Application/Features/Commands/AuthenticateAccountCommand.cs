@@ -30,18 +30,18 @@ namespace Account.Microservice.Core.Application.Features.Commands
 
         public async Task<int> Handle(AuthenticateAccountCommand command, CancellationToken cancellationToken)
         {
-            var account = await _context.Accounts.FirstOrDefaultAsync(x => x.Id == command.AccountId);
+            var account = await _context.Accounts.AsQueryable().FirstOrDefaultAsync(x => x.Id == command.AccountId);
 
             if (account == null) return default;
 
             try
             {
                 // Get Account roles 
-                var accountRoles = await _context.AccountRoles.Where(x => x.AccountId == account.Id)
+                var accountRoles = await _context.AccountRoles.AsQueryable().Where(x => x.AccountId == account.Id)
                     .AsNoTracking()
                     .ToListAsync();
 
-                if(accountRoles.Any())
+                if (accountRoles.Any())
                 {
                     var roleIds = accountRoles.Select(x => x.RoleId).ToList();
 
@@ -64,7 +64,8 @@ namespace Account.Microservice.Core.Application.Features.Commands
                     _context.Accounts.Update(account);
                     await _context.SaveChangesAsync();
                     return account.Id;
-                } else
+                }
+                else
                 {
                     throw new ArgumentNullException($"{nameof(AuthenticateAccountCommand)}: Failed to get roles for account : {command.AccountId}");
                 }
@@ -73,7 +74,7 @@ namespace Account.Microservice.Core.Application.Features.Commands
             {
                 _logger.LogError("ERROR: {0}", ex);
                 throw new AppException(ex.Message);
-            }       
+            }
         }
     }
 }

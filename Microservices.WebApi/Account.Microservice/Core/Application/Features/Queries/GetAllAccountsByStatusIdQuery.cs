@@ -1,4 +1,5 @@
 ﻿using Account.Microservice.Core.Application.ViewModels;
+using Account.Microservice.Filters.Exceptions;
 using Account.Microservice.Helpers.Extensions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -25,14 +26,22 @@ namespace Account.Microservice.Core.Application.Features.Queries
 
         public async Task<List<AccountViewModel>> Handle(GetAllAccountsByStatusIdQuery query, CancellationToken cancellationToken)
         {
-            var accounts = await _context.Accounts.Where(x => x.StatusId == query.StatusId)
-                .AsNoTracking()
-                .ToListAsync();
+            try
+            {
+                var accounts = await _context.Accounts
+               .Where(x => x.StatusId == query.StatusId)
+               .AsNoTracking()
+               .ToListAsync();
 
-            if (accounts == null) return null;
-            if (accounts.Any())
-                return accounts.Select(x => x.ToModel()).ToList();
-            return null;
+                if (accounts == null) return null;
+                if (accounts.Any())
+                    return accounts.Select(x => x.ToModel()).ToList();
+                return null;
+            }
+            catch (System.Exception ex)
+            {
+                throw new AppException($"ERROR: {ex.Message}");
+            }
 
         }
     }

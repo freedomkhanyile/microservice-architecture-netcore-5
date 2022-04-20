@@ -27,7 +27,6 @@
 
   <ItemGroup>
     <Folder Include="FeatureTests\Commands\" />
-    <Folder Include="FeatureTests\Queries\" />
   </ItemGroup>
 
 </Project>
