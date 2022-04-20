@@ -26,12 +26,31 @@ namespace Account.Microservices.Tests.FeatureTests.Queries
         [Fact]
         public async Task GetAllActiveAccountListTest()
         {
+            // Arrange
             var handler = new GetAccountsByStatusIdQueryHandler(_mockContext.Object);
-            var result = await handler.Handle(new GetAllAccountsByStatusIdQuery { StatusId = 1}, CancellationToken.None);
+
+            // Act
+            var result = await handler.Handle(new GetAllAccountsByStatusIdQuery { StatusId = 1 }, CancellationToken.None);
 
             // Assert using Nuget Package:Shouldy
             result.ShouldBeOfType<List<AccountViewModel>>();
+            result.Count.ShouldBe(2);
+        }
 
+        [Theory]
+        [InlineData(1, 2)]
+        [InlineData(2, 1)]
+        public async Task GetAllAccountsByStatusIdQueryTest(int statusId, int count)
+        {
+            // Arrange
+            var handler = new GetAccountsByStatusIdQueryHandler(_mockContext.Object);
+
+            // Act
+            var result = await handler.Handle(new GetAllAccountsByStatusIdQuery { StatusId = statusId }, CancellationToken.None);
+
+            // Assert : using Nuget PackageL Shouldly
+            result.ShouldBeOfType<List<AccountViewModel>>();
+            result.Count.ShouldBe(count);
         }
     }
 }

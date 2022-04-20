@@ -36,7 +36,7 @@ namespace Account.Microservice.Core.Application.Features.Queries
                 if (accounts == null) return null;
                 if (accounts.Any())
                     return accounts.Select(x => x.ToModel()).ToList();
-                return null;
+                return new List<AccountViewModel>();
             }
             catch (System.Exception ex)
             {
