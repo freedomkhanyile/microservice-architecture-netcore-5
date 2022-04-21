@@ -40,6 +40,7 @@ namespace Account.Microservices.Tests.FeatureTests.Queries
         [Theory]
         [InlineData(1, 2)]
         [InlineData(2, 1)]
+        [InlineData(3, 1)]
         public async Task GetAllAccountsByStatusIdQueryTest(int statusId, int count)
         {
             // Arrange
@@ -52,5 +53,8 @@ namespace Account.Microservices.Tests.FeatureTests.Queries
             result.ShouldBeOfType<List<AccountViewModel>>();
             result.Count.ShouldBe(count);
         }
+
+
+
     }
 }

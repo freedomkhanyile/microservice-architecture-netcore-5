@@ -63,6 +63,19 @@ namespace Account.Microservices.Tests.Mocks
                     ModifyUserId = "Test",
                     IsActive = true,
                     StatusId = 2
+                },new Entities.Account
+                {
+                    Id = 4,
+                    FirstName ="Test4",
+                    LastName ="Account",
+                    Email = "test4@mail.com",
+                    Cellphone = "011245487451",
+                    CreatedDate = DateTime.Now,
+                    CreateUserId = "Test",
+                    ModifyDate = DateTime.Now,
+                    ModifyUserId = "Test",
+                    IsActive = true,
+                    StatusId = 3
                 }
             }.AsQueryable();
 

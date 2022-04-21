@@ -7,6 +7,7 @@ C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Gateway
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Gateway.WebApi\bin\Debug\net5.0\Gateway.WebApi.dll
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Gateway.WebApi\bin\Debug\net5.0\ref\Gateway.WebApi.dll
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Gateway.WebApi\bin\Debug\net5.0\Gateway.WebApi.pdb
+C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Gateway.WebApi\obj\Debug\net5.0\Gateway.WebApi.csproj.AssemblyReference.cache
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Gateway.WebApi\obj\Debug\net5.0\Gateway.WebApi.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Gateway.WebApi\obj\Debug\net5.0\Gateway.WebApi.AssemblyInfoInputs.cache
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Gateway.WebApi\obj\Debug\net5.0\Gateway.WebApi.AssemblyInfo.cs
@@ -19,4 +20,3 @@ C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Gateway
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Gateway.WebApi\obj\Debug\net5.0\ref\Gateway.WebApi.dll
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Gateway.WebApi\obj\Debug\net5.0\Gateway.WebApi.pdb
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Gateway.WebApi\obj\Debug\net5.0\Gateway.WebApi.genruntimeconfig.cache
-C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Gateway.WebApi\obj\Debug\net5.0\Gateway.WebApi.csproj.AssemblyReference.cache

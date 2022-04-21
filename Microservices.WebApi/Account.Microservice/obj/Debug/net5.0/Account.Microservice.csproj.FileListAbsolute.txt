@@ -73,6 +73,7 @@ C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account.Microservice\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account.Microservice\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account.Microservice\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account.Microservice\obj\Debug\net5.0\Account.Microservice.csproj.AssemblyReference.cache
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account.Microservice\obj\Debug\net5.0\Account.Microservice.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account.Microservice\obj\Debug\net5.0\Account.Microservice.AssemblyInfoInputs.cache
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account.Microservice\obj\Debug\net5.0\Account.Microservice.AssemblyInfo.cs

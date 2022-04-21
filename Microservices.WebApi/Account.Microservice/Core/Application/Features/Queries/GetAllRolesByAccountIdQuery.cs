@@ -1,5 +1,6 @@
 ﻿using Account.Microservice.Core.Application.ViewModels;
 using Account.Microservice.Filters.Exceptions;
+using Account.Microservice.Helpers.Extensions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -47,12 +48,12 @@ namespace Account.Microservice.Core.Application.Features.Queries
 
                     if (roles.Any())
                     {
-
+                        return roles.Select(x => x.ToModel()).ToList();
                     }
                     else
                     {
                         _logger.LogError("{0} : Did not return any roles from RoleIds collection for account : {1} on {2}", nameof(GetAllRolesByAccountIdQuery), query.AccountId, DateTime.UtcNow.ToLocalTime());
-                        return null;
+                        return new List<RoleViewModel>(); 
                     }
 
                     return roleList;
@@ -60,7 +61,7 @@ namespace Account.Microservice.Core.Application.Features.Queries
                 else
                 {
                     _logger.LogError("{0} : Did not return any RoleIds for account : {1} on {2}", nameof(GetAllRolesByAccountIdQuery), query.AccountId, DateTime.UtcNow.ToLocalTime());
-                    return null;
+                    return new List<RoleViewModel>();
                 }
             }
             catch (Exception ex)
