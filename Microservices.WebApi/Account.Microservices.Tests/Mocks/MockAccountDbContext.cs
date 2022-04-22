@@ -99,12 +99,16 @@ namespace Account.Microservices.Tests.Mocks
             mockSet.As<IQueryable<Entities.Account>>()
                 .Setup(m => m.GetEnumerator()).Returns(accounts.GetEnumerator());
 
-            mockDb.Setup(db => db.Accounts).Returns(mockSet.Object);
-            mockDb.Setup(db => db.Accounts.Add(It.IsAny<Entities.Account>())).Returns((Entities.Account account) =>
-            {
-                accounts.ToList().Add(account);
-                return null;
-            });
+            mockSet.Setup(m => m.AddAsync(It.IsAny<Entities.Account>(), default))
+                .Callback<Entities.Account, CancellationToken>((m, token) =>
+                {
+                    m.Id = accounts.ToList().Count() + 1;
+                    accounts.ToList().Add(m);
+                });
+
+
+            mockDb.Setup(db => db.Accounts).Returns(mockSet.Object);            
+            
 
             #endregion
 
@@ -166,13 +170,14 @@ namespace Account.Microservices.Tests.Mocks
             mockRoleSet.As<IQueryable<Entities.Role>>()
                 .Setup(m => m.GetEnumerator()).Returns(roles.GetEnumerator());
 
-            mockDb.Setup(db => db.Roles).Returns(mockRoleSet.Object);
             mockDb.Setup(db => db.Roles.Add(It.IsAny<Entities.Role>())).Returns((Entities.Role role) =>
             {
                 roles.ToList().Add(role);
                 return null;
             });
-
+             
+            mockDb.Setup(db => db.Roles).Returns(mockRoleSet.Object);
+            
             #endregion
 
             #region Account Role Setup
@@ -240,7 +245,8 @@ namespace Account.Microservices.Tests.Mocks
             });
 
             #endregion
-
+            
+            mockDb.Setup(c => c.SaveChangesAsync()).ReturnsAsync(1);
             return mockDb;
         }
     }
@@ -322,4 +328,6 @@ namespace Account.Microservices.Tests.Mocks
             return new ValueTask<bool>(this.enumerator.MoveNext());
         }
     }
+
+
 }

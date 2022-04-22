@@ -19,14 +19,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Xunit.SkippableFact" Version="1.4.13" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Account.Microservice\Account.Microservice.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="FeatureTests\Commands\" />
   </ItemGroup>
 
 </Project>
