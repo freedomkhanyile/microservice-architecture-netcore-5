@@ -21,6 +21,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{354EAA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Microservices.Core", "Domain.Microservices.Core\Domain.Microservices.Core.csproj", "{9263B2AF-D5E2-4D9E-B891-7C81E0E7D374}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Brokers", "Brokers", "{2EE9B6EC-DB0D-42F0-83C6-211E3794AFFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMq.Broker", "RabbitMq.Broker\RabbitMq.Broker.csproj", "{82C16BD8-B748-45B9-880B-33B74B084A5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,10 @@ Global
 		{9263B2AF-D5E2-4D9E-B891-7C81E0E7D374}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9263B2AF-D5E2-4D9E-B891-7C81E0E7D374}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9263B2AF-D5E2-4D9E-B891-7C81E0E7D374}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82C16BD8-B748-45B9-880B-33B74B084A5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82C16BD8-B748-45B9-880B-33B74B084A5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82C16BD8-B748-45B9-880B-33B74B084A5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82C16BD8-B748-45B9-880B-33B74B084A5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +69,7 @@ Global
 		{3DB718F7-4AEE-44F3-844E-1AC21EA17E94} = {1C893BC1-24D4-4FD7-B7A1-3DBAAAFAF28F}
 		{86567948-3994-4E83-B523-098BB3F6E887} = {64897474-795E-4ABB-B996-B15C71166E46}
 		{9263B2AF-D5E2-4D9E-B891-7C81E0E7D374} = {354EAA9D-57E7-454C-B59E-4C9AA9561F3A}
+		{82C16BD8-B748-45B9-880B-33B74B084A5B} = {2EE9B6EC-DB0D-42F0-83C6-211E3794AFFB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A8809C39-402B-458A-AC2F-6059F3B243E4}
