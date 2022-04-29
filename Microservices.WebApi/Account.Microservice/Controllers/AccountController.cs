@@ -1,11 +1,12 @@
-﻿using Account.Microservice.Core.Application.Features.Commands;
-using Account.Microservice.Core.Application.Features.Queries;
-using Account.Microservice.Core.Application.ViewModels;
+﻿using Account.Microservice.Application.Features.Commands;
+using Account.Microservice.Application.Features.Queries;
+using Account.Microservice.Application.Helpers.Extensions;
+using Account.Microservice.Application.ViewModels;
 using Account.Microservice.Filters.Authorize;
-using Account.Microservice.Helpers.Extensions;
+
 using MediatR;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;

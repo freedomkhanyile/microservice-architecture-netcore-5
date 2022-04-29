@@ -1,5 +1,6 @@
-﻿using Account.Microservice.Core.Application.ViewModels;
-using Account.Microservice.Helpers.Constants;
+﻿using Account.Microservice.Application.Helpers.Constants;
+using Account.Microservice.Application.ViewModels;
+
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;

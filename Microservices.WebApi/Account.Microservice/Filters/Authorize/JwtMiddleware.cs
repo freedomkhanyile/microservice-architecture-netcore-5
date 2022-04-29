@@ -1,5 +1,6 @@
-﻿using Account.Microservice.Core.Application.Features.Queries;
-using Account.Microservice.Core.Application.Services;
+﻿
+using Account.Microservice.Application.Features.Queries;
+using Account.Microservice.Application.Services;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using System.Linq;

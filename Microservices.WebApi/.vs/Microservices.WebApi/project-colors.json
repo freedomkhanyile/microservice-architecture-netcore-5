@@ -30,7 +30,47 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "424f2914-b592-4124-86c3-630a886a7882": {
+      "ProjectGuid": "424f2914-b592-4124-86c3-630a886a7882",
+      "DisplayName": "Gateway.WebApi",
+      "ColorIndex": 5
+    },
+    "9263b2af-d5e2-4d9e-b891-7c81e0e7d374": {
+      "ProjectGuid": "9263b2af-d5e2-4d9e-b891-7c81e0e7d374",
+      "DisplayName": "Domain.Microservices.Core",
+      "ColorIndex": 6
+    },
+    "82c16bd8-b748-45b9-880b-33b74b084a5b": {
+      "ProjectGuid": "82c16bd8-b748-45b9-880b-33b74b084a5b",
+      "DisplayName": "RabbitMq.Broker",
+      "ColorIndex": 7
+    },
+    "fd44c51d-7456-4d45-9ef3-d167a215d5c1": {
+      "ProjectGuid": "fd44c51d-7456-4d45-9ef3-d167a215d5c1",
+      "DisplayName": "Microservice.IoC",
+      "ColorIndex": 8
+    },
+    "c5aabf5a-fb1d-4290-858b-ace2d9acda9e": {
+      "ProjectGuid": "c5aabf5a-fb1d-4290-858b-ace2d9acda9e",
+      "DisplayName": "Container.Microservices.IoC",
+      "ColorIndex": 9
+    },
+    "3465398f-ed2c-4627-b63a-f5d341de7993": {
+      "ProjectGuid": "3465398f-ed2c-4627-b63a-f5d341de7993",
+      "DisplayName": "Account.Microservice.Persistence",
+      "ColorIndex": 10
+    },
+    "7e946ab3-ef83-4ca8-8eb9-7209454fe370": {
+      "ProjectGuid": "7e946ab3-ef83-4ca8-8eb9-7209454fe370",
+      "DisplayName": "Account.Microservice.Application",
+      "ColorIndex": 11
+    },
+    "7895eae6-a80e-4e18-a87f-b04e24d64800": {
+      "ProjectGuid": "7895eae6-a80e-4e18-a87f-b04e24d64800",
+      "DisplayName": "Account.Microservice.Domain",
+      "ColorIndex": 12
     }
   },
-  "NextColorIndex": 5
+  "NextColorIndex": 13
 }

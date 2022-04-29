@@ -1,5 +1,4 @@
-﻿using Account.Microservice.Core.Application;
-using Entities = Account.Microservice.Core.Domain.Entities;
+﻿
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -9,7 +8,8 @@ using Microsoft.EntityFrameworkCore.Query;
 using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
-
+using Account.Microservice.Application;
+using Entities = Account.Microservice.Domain.Entities;
 
 namespace Account.Microservices.Tests.Mocks
 {

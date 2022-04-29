@@ -1,4 +1,4 @@
-﻿using Account.Microservice.Filters.Exceptions;
+﻿using Account.Microservice.Application.Helpers.Exceptions;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;

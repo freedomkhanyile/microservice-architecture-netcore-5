@@ -1,7 +1,7 @@
-﻿using Account.Microservice.Core.Application;
-using Account.Microservice.Core.Application.Features.Queries;
-using Account.Microservice.Core.Application.ViewModels;
-using Account.Microservice.Filters.Exceptions;
+﻿
+using Account.Microservice.Application;
+using Account.Microservice.Application.Features.Queries;
+using Account.Microservice.Application.ViewModels;
 using Account.Microservices.Tests.Mocks;
 using Microsoft.Extensions.Logging;
 using Moq;

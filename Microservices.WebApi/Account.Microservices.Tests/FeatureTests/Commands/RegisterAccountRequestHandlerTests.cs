@@ -1,6 +1,6 @@
-﻿using Account.Microservice.Core.Application;
-using Account.Microservice.Core.Application.Features.Commands;
-using Account.Microservice.Core.Application.Features.Queries;
+﻿
+using Account.Microservice.Application;
+using Account.Microservice.Application.Features.Commands;
 using Account.Microservices.Tests.Mocks;
 using Microsoft.Extensions.Logging;
 using Moq;

@@ -1,6 +1,6 @@
+using Account.Microservice.Application.Helpers.Constants;
 using Account.Microservice.Filters.Authorize;
 using Account.Microservice.Filters.Swagger;
-using Account.Microservice.Helpers.Constants;
 using Account.Microservice.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

@@ -4,6 +4,254 @@
     "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice\\Account.Microservice.csproj": {}
   },
   "projects": {
+    "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice.Application\\Account.Microservice.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice.Application\\Account.Microservice.Application.csproj",
+        "projectName": "Account.Microservice.Application",
+        "projectPath": "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice.Application\\Account.Microservice.Application.csproj",
+        "packagesPath": "C:\\Users\\freedom.khanyile\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\freedom.khanyile\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice.Domain\\Account.Microservice.Domain.csproj": {
+                "projectPath": "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice.Domain\\Account.Microservice.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "JWT": {
+              "target": "Package",
+              "version": "[8.7.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.Extensions.ApiDescription.Client": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "NETCore.MailKit": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
+            "NSwag.ApiDescription.Client": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[13.0.5, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.25.2, )"
+            },
+            "System.Runtime.Extensions": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice.Domain\\Account.Microservice.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice.Domain\\Account.Microservice.Domain.csproj",
+        "projectName": "Account.Microservice.Domain",
+        "projectPath": "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice.Domain\\Account.Microservice.Domain.csproj",
+        "packagesPath": "C:\\Users\\freedom.khanyile\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\freedom.khanyile\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice.Persistence\\Account.Microservice.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice.Persistence\\Account.Microservice.Persistence.csproj",
+        "projectName": "Account.Microservice.Persistence",
+        "projectPath": "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice.Persistence\\Account.Microservice.Persistence.csproj",
+        "packagesPath": "C:\\Users\\freedom.khanyile\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\freedom.khanyile\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice.Application\\Account.Microservice.Application.csproj": {
+                "projectPath": "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice.Application\\Account.Microservice.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice\\Account.Microservice.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,7 +275,14 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice.Application\\Account.Microservice.Application.csproj": {
+                "projectPath": "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice.Application\\Account.Microservice.Application.csproj"
+              },
+              "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice.Persistence\\Account.Microservice.Persistence.csproj": {
+                "projectPath": "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Account.Microservice.Persistence\\Account.Microservice.Persistence.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
