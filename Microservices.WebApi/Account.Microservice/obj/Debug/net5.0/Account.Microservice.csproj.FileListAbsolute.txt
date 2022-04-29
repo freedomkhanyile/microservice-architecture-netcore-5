@@ -95,3 +95,12 @@ C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account.Microservice\obj\Debug\net5.0\Account.Microservice.xml
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account.Microservice\obj\Debug\net5.0\Account.Microservice.pdb
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account.Microservice\obj\Debug\net5.0\Account.Microservice.genruntimeconfig.cache
+C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account.Microservice\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account.Microservice\bin\Debug\net5.0\RabbitMQ.Client.dll
+C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account.Microservice\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account.Microservice\bin\Debug\net5.0\Container.Microservices.IoC.dll
+C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account.Microservice\bin\Debug\net5.0\Domain.Microservices.Core.dll
+C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account.Microservice\bin\Debug\net5.0\RabbitMq.Broker.dll
+C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account.Microservice\bin\Debug\net5.0\Container.Microservices.IoC.pdb
+C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account.Microservice\bin\Debug\net5.0\Domain.Microservices.Core.pdb
+C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Account.Microservice\bin\Debug\net5.0\RabbitMq.Broker.pdb
