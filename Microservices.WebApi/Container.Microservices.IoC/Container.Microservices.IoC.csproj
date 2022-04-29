@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -9,6 +9,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Account.Microservice.Application\Account.Microservice.Application.csproj" />
+    <ProjectReference Include="..\Account.Microservice.Domain\Account.Microservice.Domain.csproj" />
+    <ProjectReference Include="..\Account.Microservice.Persistence\Account.Microservice.Persistence.csproj" />
     <ProjectReference Include="..\Domain.Microservices.Core\Domain.Microservices.Core.csproj" />
     <ProjectReference Include="..\RabbitMq.Broker\RabbitMq.Broker.csproj" />
   </ItemGroup>
