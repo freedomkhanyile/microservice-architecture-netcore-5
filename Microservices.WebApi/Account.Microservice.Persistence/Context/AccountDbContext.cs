@@ -1,5 +1,6 @@
 ﻿using Account.Microservice.Application;
- using Microsoft.EntityFrameworkCore;
+using Account.Microservice.Application.Helpers.Extensions;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,7 @@ namespace Account.Microservice.Persistence.Context
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            //builder.Seed();
+            builder.Seed();
         }
 
          

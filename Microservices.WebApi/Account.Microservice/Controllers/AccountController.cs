@@ -35,7 +35,7 @@ namespace Account.Microservice.Controllers
         /// <returns>Authenticatted Account Model</returns>
         [AllowAnonymous]
         [HttpPost("login")]
-        public async Task<IActionResult> LoginAsync([FromBody] LoginAccountViewModel model)
+        public async Task<ActionResult<AccountViewModel>> LoginAsync([FromBody] LoginAccountViewModel model)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
@@ -79,7 +79,7 @@ namespace Account.Microservice.Controllers
         /// <returns></returns>
         [AllowAnonymous]
         [HttpPost("register")]
-        public async Task<IActionResult> RegisterAsync([FromBody] RegisterAccountViewModel model)
+        public async Task<ActionResult<MessageViewModel>> RegisterAsync([FromBody] RegisterAccountViewModel model)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 

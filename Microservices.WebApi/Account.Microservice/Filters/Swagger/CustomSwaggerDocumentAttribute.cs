@@ -11,7 +11,7 @@ namespace Account.Microservice.Filters.Swagger
             {
                 Title = "Account Microservice",
                 Version = "v1.0.0",
-                Description = ".Net Core C# Api that is the middleware between external services and our Front-end UI",
+                Description = "Account Manager Microservice (User logins and registration etc.)",
                 Contact = new OpenApiContact
                 {
                     Name = "Development Engineer",

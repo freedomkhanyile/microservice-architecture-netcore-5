@@ -15,15 +15,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account.Microservices.Tests
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{354EAA9D-57E7-454C-B59E-4C9AA9561F3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Microservices.Core", "Domain.Microservices.Core\Domain.Microservices.Core.csproj", "{9263B2AF-D5E2-4D9E-B891-7C81E0E7D374}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Microservices.Core", "Domain.Microservices.Core\Domain.Microservices.Core.csproj", "{9263B2AF-D5E2-4D9E-B891-7C81E0E7D374}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Brokers", "Brokers", "{2EE9B6EC-DB0D-42F0-83C6-211E3794AFFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMq.Broker", "RabbitMq.Broker\RabbitMq.Broker.csproj", "{82C16BD8-B748-45B9-880B-33B74B084A5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMq.Broker", "RabbitMq.Broker\RabbitMq.Broker.csproj", "{82C16BD8-B748-45B9-880B-33B74B084A5B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Containers", "Containers", "{23952C10-16DA-4794-8C23-0325344B5225}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Container.Microservices.IoC", "Container.Microservices.IoC\Container.Microservices.IoC.csproj", "{C5AABF5A-FB1D-4290-858B-ACE2D9ACDA9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Container.Microservices.IoC", "Container.Microservices.IoC\Container.Microservices.IoC.csproj", "{C5AABF5A-FB1D-4290-858B-ACE2D9ACDA9E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Account", "Account", "{BDB3A002-91D1-441A-A6D2-83F4E38B27C9}"
 EndProject
@@ -31,17 +31,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Student", "Student", "{AE25C10A-CE6C-4D7A-B3E6-65C0CBDE5C85}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{B4B54CB6-416D-42C8-8435-A48B12DF8841}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{B4B54CB6-416D-42C8-8435-A48B12DF8841}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrustracture", "Infrustracture", "{EBEB62F6-5978-48CB-8F09-A0CF76C496A9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{67C002B1-C3F1-4D87-B51C-2F7A3685ED75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Account.Microservice.Persistence", "Account.Microservice.Persistence\Account.Microservice.Persistence.csproj", "{3465398F-ED2C-4627-B63A-F5D341DE7993}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account.Microservice.Persistence", "Account.Microservice.Persistence\Account.Microservice.Persistence.csproj", "{3465398F-ED2C-4627-B63A-F5D341DE7993}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Account.Microservice.Application", "Account.Microservice.Application\Account.Microservice.Application.csproj", "{7E946AB3-EF83-4CA8-8EB9-7209454FE370}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account.Microservice.Application", "Account.Microservice.Application\Account.Microservice.Application.csproj", "{7E946AB3-EF83-4CA8-8EB9-7209454FE370}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Account.Microservice.Domain", "Account.Microservice.Domain\Account.Microservice.Domain.csproj", "{7895EAE6-A80E-4E18-A87F-B04E24D64800}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account.Microservice.Domain", "Account.Microservice.Domain\Account.Microservice.Domain.csproj", "{7895EAE6-A80E-4E18-A87F-B04E24D64800}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E7AF359A-BC68-4D84-8787-FE1A529CD7F2}"
 EndProject
