@@ -31,6 +31,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Account.Microservice.Domain\Account.Microservice.Domain.csproj" />
+    <ProjectReference Include="..\Domain.Microservices.Core\Domain.Microservices.Core.csproj" />
   </ItemGroup>
 
 </Project>

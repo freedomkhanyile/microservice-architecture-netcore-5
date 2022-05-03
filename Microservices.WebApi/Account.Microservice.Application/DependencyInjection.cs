@@ -1,4 +1,5 @@
-﻿using Account.Microservice.Application.Services;
+﻿using Account.Microservice.Application.Features.Commands;
+using Account.Microservice.Application.Services;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
@@ -18,6 +19,7 @@ namespace Account.Microservice.Application
         {
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddServices();
+            services.AddCommands();
         }
 
         public static void AddServices(this IServiceCollection services)
@@ -26,6 +28,12 @@ namespace Account.Microservice.Application
 
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IEncryptionService, EncryptionService>();
+            services.AddScoped<IAccountService, AccountService>();
+        }
+
+        public static void AddCommands(this IServiceCollection services)
+        {
+            services.AddTransient<IRequestHandler<AccountCreatedCommand, bool>, AccountCreatedCommandHandler>();
         }
 
     }

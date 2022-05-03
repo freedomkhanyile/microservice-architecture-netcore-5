@@ -1,6 +1,7 @@
 ﻿
 using Account.Microservice.Application.Helpers.Exceptions;
 using Account.Microservice.Application.Helpers.Extensions;
+using Account.Microservice.Application.Services;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -40,11 +41,13 @@ namespace Account.Microservice.Application.Features.Commands
     {
         private readonly IAccountDbContext _context;
         private readonly Random _random = new Random();
+        private readonly IAccountService _accountService;
         private readonly ILogger<RegisterAccountCommandHandler> _logger;
-        public RegisterAccountCommandHandler(IAccountDbContext dbContext, ILogger<RegisterAccountCommandHandler> logger)
+        public RegisterAccountCommandHandler(IAccountDbContext dbContext, ILogger<RegisterAccountCommandHandler> logger, IAccountService accountService)
         {
             _context = dbContext;
             _logger = logger;
+            _accountService = accountService;
         }
 
         public async Task<int> Handle(RegisterAccountCommand command, CancellationToken cancellationToken)
@@ -78,6 +81,8 @@ namespace Account.Microservice.Application.Features.Commands
                     await _context.SaveChangesAsync();
                 }
 
+                _accountService.PublishAccountCreatedEvent(accountToCreate.ToModel());
+                
                 return accountToCreate.Id;
             }
             catch (Exception ex)
