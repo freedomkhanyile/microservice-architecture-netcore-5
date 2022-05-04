@@ -657,6 +657,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Domain.Microservices.Core\\Domain.Microservices.Core.csproj": {
+                "projectPath": "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Domain.Microservices.Core\\Domain.Microservices.Core.csproj"
+              },
               "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Student.Microservice.Domain\\Student.Microservice.Domain.csproj": {
                 "projectPath": "C:\\Users\\freedom.khanyile\\source\\demo\\Microservices\\Microservices.WebApi\\Student.Microservice.Domain\\Student.Microservice.Domain.csproj"
               }

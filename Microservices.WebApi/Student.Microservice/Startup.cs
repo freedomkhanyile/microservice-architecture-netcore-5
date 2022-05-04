@@ -1,3 +1,4 @@
+using Domain.Microservices.Core.Bus;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -7,6 +8,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Student.Microservice.Application.EventHandlers;
+using Student.Microservice.Application.Events;
 using Student.Microservice.Filters.Authorize;
 using Student.Microservice.Filters.Swagger;
 using Student.Microservice.IoC;
@@ -102,6 +105,14 @@ namespace Student.Microservice
             {
                 endpoints.MapControllers();
             });
+
+            ConfigureEventBus(app);
+        }
+
+        private void ConfigureEventBus(IApplicationBuilder app)
+        {
+            var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
+            eventBus.Subscribe<AccountCreatedEvent, AccountCreatedEventHandler>();
         }
     }
 }

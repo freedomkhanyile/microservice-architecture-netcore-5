@@ -2639,6 +2639,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "BCrypt.Net-Next": "4.0.0",
+          "Domain.Microservices.Core": "1.0.0",
           "JWT": "8.7.0",
           "MediatR": "9.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",

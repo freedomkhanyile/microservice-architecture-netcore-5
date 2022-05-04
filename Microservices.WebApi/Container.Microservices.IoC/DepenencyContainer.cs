@@ -4,6 +4,7 @@ using Domain.Microservices.Core.Bus;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RabbitMq.Broker;
+using Student.Microservice.Application;
 using Student.Microservice.Persistence;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,7 @@ namespace Container.Microservices.IoC
 
             // Application Events, CQRS Features and Services etc.
             services.AddAccountApplication();
+            services.AddStudentApplication();
 
             // Data Access
             services.AddAccountPersistence(configuration);
