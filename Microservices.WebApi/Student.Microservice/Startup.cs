@@ -7,10 +7,15 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Student.Microservice.Filters.Authorize;
+using Student.Microservice.Filters.Swagger;
 using Student.Microservice.IoC;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Student.Microservice
@@ -28,11 +33,50 @@ namespace Student.Microservice
         public void ConfigureServices(IServiceCollection services)
         {
             ContainerSetup.Setup(services, Configuration);
-
-            services.AddControllers();
+ 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Student.Microservice", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Account Microservice", Version = "v1" });
+                c.DocumentFilter<CustomSwaggerDocumentAttribute>();
+                c.OperationFilter<CustomSwaggerHeaderAttribute>();
+
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "JWT Authorization header using the Bearer scheme."
+                });
+
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        new string[] {}
+                    }
+                });
+
+                // using System.Reflection;
+                var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+
+            });
+
+
+            services.AddControllers().AddJsonOptions(x =>
+            {
+                // serialize enums as strings
+                x.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
             });
         }
 
@@ -51,6 +95,8 @@ namespace Student.Microservice
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseMiddleware<ApiKeyMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {
