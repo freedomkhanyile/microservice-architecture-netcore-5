@@ -1,6 +1,7 @@
 ﻿
 using Account.Microservice.Application;
 using Account.Microservice.Application.Features.Commands;
+using Account.Microservice.Application.Services;
 using Account.Microservices.Tests.Mocks;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -29,7 +30,8 @@ namespace Account.Microservices.Tests.FeatureTests.Commands
         {
             // Arrange
             var mockLogger = new Mock<ILogger<RegisterAccountCommandHandler>>();
-            var handler = new RegisterAccountCommandHandler(_mockContext.Object, mockLogger.Object);
+            var mockAccountService = new Mock<IAccountService>();
+            var handler = new RegisterAccountCommandHandler(_mockContext.Object, mockLogger.Object, mockAccountService.Object);
 
 
             var command = new RegisterAccountCommand

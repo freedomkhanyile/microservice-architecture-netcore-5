@@ -56,11 +56,13 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Core\Application\Features\" />
-    <Folder Include="Core\Application\ViewModels\" />
+    <Folder Include="Controllers\" />
     <Folder Include="Helpers\" />
     <Folder Include="Applogs\" />
     <Folder Include="Filters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Container.Microservices.IoC\Container.Microservices.IoC.csproj" />
   </ItemGroup>
 
 </Project>

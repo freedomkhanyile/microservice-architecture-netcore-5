@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using Student.Microservice.Infrustucture;
+using Student.Microservice.Persistence.Context;
 
-namespace Student.Microservice.Migrations
+namespace Student.Microservice.Persistence.Migrations
 {
     [DbContext(typeof(StudentDbContext))]
     partial class StudentDbContextModelSnapshot : ModelSnapshot
@@ -19,7 +19,7 @@ namespace Student.Microservice.Migrations
                 .HasAnnotation("ProductVersion", "5.0.11")
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-            modelBuilder.Entity("Student.Microservice.Core.Domain.Entities.Student", b =>
+            modelBuilder.Entity("Student.Microservice.Domain.Entities.Student", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

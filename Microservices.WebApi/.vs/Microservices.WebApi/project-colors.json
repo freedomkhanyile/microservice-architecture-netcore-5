@@ -70,7 +70,22 @@
       "ProjectGuid": "7895eae6-a80e-4e18-a87f-b04e24d64800",
       "DisplayName": "Account.Microservice.Domain",
       "ColorIndex": 12
+    },
+    "a9733f48-48f9-4e0d-9a77-040770b217ed": {
+      "ProjectGuid": "a9733f48-48f9-4e0d-9a77-040770b217ed",
+      "DisplayName": "Student.Microservice.Persistence",
+      "ColorIndex": 13
+    },
+    "829fad14-4a4c-4762-b57d-cf95a87d8b62": {
+      "ProjectGuid": "829fad14-4a4c-4762-b57d-cf95a87d8b62",
+      "DisplayName": "Student.Microservice.Domain",
+      "ColorIndex": 14
+    },
+    "3aa44d28-d6f1-4607-bb28-c2488b325143": {
+      "ProjectGuid": "3aa44d28-d6f1-4607-bb28-c2488b325143",
+      "DisplayName": "Student.Microservice.Application",
+      "ColorIndex": 15
     }
   },
-  "NextColorIndex": 13
+  "NextColorIndex": 0
 }

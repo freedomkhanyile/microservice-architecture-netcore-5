@@ -2539,6 +2539,7 @@
         "dependencies": {
           "Account.Microservice.Domain": "1.0.0",
           "BCrypt.Net-Next": "4.0.0",
+          "Domain.Microservices.Core": "1.0.0",
           "JWT": "8.7.0",
           "MediatR": "9.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
@@ -2592,7 +2593,8 @@
           "Account.Microservice.Persistence": "1.0.0",
           "Domain.Microservices.Core": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "6.0.0",
-          "RabbitMq.Broker": "1.0.0"
+          "RabbitMq.Broker": "1.0.0",
+          "Student.Microservice.Persistence": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Container.Microservices.IoC.dll": {}
@@ -2630,6 +2632,56 @@
         },
         "runtime": {
           "bin/placeholder/RabbitMq.Broker.dll": {}
+        }
+      },
+      "Student.Microservice.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "BCrypt.Net-Next": "4.0.0",
+          "JWT": "8.7.0",
+          "MediatR": "9.0.0",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.11",
+          "Microsoft.EntityFrameworkCore": "5.0.1",
+          "NETCore.MailKit": "2.0.3",
+          "Newtonsoft.Json": "13.0.1",
+          "SendGrid": "9.25.2",
+          "Student.Microservice.Domain": "1.0.0",
+          "System.Runtime.Extensions": "4.3.1"
+        },
+        "compile": {
+          "bin/placeholder/Student.Microservice.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Student.Microservice.Application.dll": {}
+        }
+      },
+      "Student.Microservice.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Student.Microservice.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Student.Microservice.Domain.dll": {}
+        }
+      },
+      "Student.Microservice.Persistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.11",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.11",
+          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "5.0.0",
+          "Student.Microservice.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Student.Microservice.Persistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Student.Microservice.Persistence.dll": {}
         }
       }
     }
@@ -9427,6 +9479,21 @@
       "type": "project",
       "path": "../RabbitMq.Broker/RabbitMq.Broker.csproj",
       "msbuildProject": "../RabbitMq.Broker/RabbitMq.Broker.csproj"
+    },
+    "Student.Microservice.Application/1.0.0": {
+      "type": "project",
+      "path": "../Student.Microservice.Application/Student.Microservice.Application.csproj",
+      "msbuildProject": "../Student.Microservice.Application/Student.Microservice.Application.csproj"
+    },
+    "Student.Microservice.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Student.Microservice.Domain/Student.Microservice.Domain.csproj",
+      "msbuildProject": "../Student.Microservice.Domain/Student.Microservice.Domain.csproj"
+    },
+    "Student.Microservice.Persistence/1.0.0": {
+      "type": "project",
+      "path": "../Student.Microservice.Persistence/Student.Microservice.Persistence.csproj",
+      "msbuildProject": "../Student.Microservice.Persistence/Student.Microservice.Persistence.csproj"
     }
   },
   "projectFileDependencyGroups": {
