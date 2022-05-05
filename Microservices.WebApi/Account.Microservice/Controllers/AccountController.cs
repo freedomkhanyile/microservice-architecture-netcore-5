@@ -20,18 +20,16 @@ namespace Account.Microservice.Controllers
     {
         private readonly ILogger<AccountController> _logger;
         private readonly IMediator _mediator;
-        private IHostingEnvironment _env;
-        public AccountController(ILogger<AccountController> logger, IMediator mediator, IHostingEnvironment env)
+        public AccountController(ILogger<AccountController> logger, IMediator mediator)
         {
             _logger = logger;
             _mediator = mediator;
-            _env = env;
         }
 
         /// <summary>
         /// Login user with email and password
         /// </summary>
-        /// <param name="LoginAccountViewModel"></param>
+        /// <param name="model"></param>
         /// <returns>Authenticatted Account Model</returns>
         [AllowAnonymous]
         [HttpPost("login")]

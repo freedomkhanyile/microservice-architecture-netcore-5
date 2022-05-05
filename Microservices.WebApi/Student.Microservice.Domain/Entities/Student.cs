@@ -17,7 +17,7 @@ namespace Student.Microservice.Domain.Entities
         public string CellNumber { get; set; }
         public string Ethnicity { get; set; }
         public string HomeLanguage { get; set; }
-        [Required]
+     
         public string IdNumber { get; set; }
         [Required]
         public int AccountId { get; set; } // We tie this to the logged in user.

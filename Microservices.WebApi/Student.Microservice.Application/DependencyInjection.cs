@@ -17,6 +17,7 @@ namespace Student.Microservice.Application
             services.AddServices();
             services.AddCommands();
             services.AddEvents();
+            services.AddEventHandler();
         }
         public static void AddServices(this IServiceCollection services)
         {
@@ -31,6 +32,11 @@ namespace Student.Microservice.Application
         public static void AddEvents(this IServiceCollection services)
         {
             services.AddTransient<IEventHandler<AccountCreatedEvent>, AccountCreatedEventHandler>();
+        }
+
+        public static void AddEventHandler(this IServiceCollection services)
+        {
+            services.AddTransient<AccountCreatedEventHandler>();
         }
 
     }

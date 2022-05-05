@@ -122,42 +122,24 @@ namespace RabbitMq.Broker
         {
             if (_handlers.ContainsKey(eventName))
             {
-                var subs = _handlers[eventName];
-
-                foreach (var subscription in subs)
+                using (var scope = _serviceScopeFactory.CreateScope())
                 {
-                    // Create an instance of our handler.
-                    var handler = Activator.CreateInstance(subscription);
-                    if (handler == null) continue;
+                    var subs = _handlers[eventName];
 
-                    var eventType = _eventTypes.SingleOrDefault(t => t.Name == eventName);
-                    var @ev = JsonConvert.DeserializeObject(message, eventType);
+                    foreach (var subscription in subs)
+                    {
+                        // Create an instance of our handler.
+                        var handler = scope.ServiceProvider.GetService(subscription);
+                        if (handler == null) continue;
 
-                    var concreteType = typeof(IEventHandler<>).MakeGenericType(eventType);
-                    await (Task)concreteType.GetMethod("Handle").Invoke(handler, new object[] { @ev });
+                        var eventType = _eventTypes.SingleOrDefault(t => t.Name == eventName);
+                        var @ev = JsonConvert.DeserializeObject(message, eventType);
+
+                        var concreteType = typeof(IEventHandler<>).MakeGenericType(eventType);
+                        await (Task)concreteType.GetMethod("Handle").Invoke(handler, new object[] { @ev });
+                    }
                 }
-            }
-
-            //if (_handlers.ContainsKey(eventName))
-            //{
-            //    using (var scope = _serviceScopeFactory.CreateScope())
-            //    {
-            //        var subscriptions = _handlers[eventName];
-            //        foreach (var subscription in subscriptions)
-            //        {
-            //            // Create an instance of our handler.
-            //            var handler = scope.ServiceProvider.GetService(subscription);
-            //            if (handler == null) continue;
-
-
-            //            var eventType = _eventTypes.SingleOrDefault(t => t.Name == eventName);
-            //            var @ev = JsonConvert.DeserializeObject(message, eventType);
-
-            //            var conreteType = typeof(IEventHandler<>).MakeGenericType(eventType);
-            //            await (Task)conreteType.GetMethod("Handle").Invoke(handler, new object[] { @ev });
-            //        }
-            //    }
-            //}
+            } 
         }
     }
 }

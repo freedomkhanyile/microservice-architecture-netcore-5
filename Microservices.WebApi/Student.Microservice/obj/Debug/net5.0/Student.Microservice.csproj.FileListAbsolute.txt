@@ -1,3 +1,4 @@
+C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\bin\Debug\net5.0\Student.Microservice.dll
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\bin\Debug\net5.0\Applogs\logs.json
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\bin\Debug\net5.0\appsettings.json
@@ -5,10 +6,6 @@ C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\bin\Debug\net5.0\Student.Microservice.deps.json
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\bin\Debug\net5.0\Student.Microservice.runtimeconfig.json
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\bin\Debug\net5.0\Student.Microservice.runtimeconfig.dev.json
-C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\bin\Debug\net5.0\Student.Microservice.dll
-C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\bin\Debug\net5.0\ref\Student.Microservice.dll
-C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\bin\Debug\net5.0\Student.Microservice.pdb
-C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\bin\Debug\net5.0\Student.Microservice.xml
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\bin\Debug\net5.0\BCrypt.Net-Next.dll
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\bin\Debug\net5.0\Humanizer.dll
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\bin\Debug\net5.0\JWT.dll
@@ -99,6 +96,7 @@ C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\obj\Debug\net5.0\Student.Microservice.AssemblyInfoInputs.cache
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\obj\Debug\net5.0\Student.Microservice.AssemblyInfo.cs
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\obj\Debug\net5.0\Student.Microservice.csproj.CoreCompileInputs.cache
+C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\obj\Debug\net5.0\Student.Microservice.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\obj\Debug\net5.0\Student.Microservice.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\obj\Debug\net5.0\scopedcss\bundle\Student.Microservice.styles.css
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\obj\Debug\net5.0\staticwebassets\Student.Microservice.StaticWebAssets.Manifest.cache
@@ -109,3 +107,6 @@ C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\obj\Debug\net5.0\Student.Microservice.xml
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\obj\Debug\net5.0\Student.Microservice.pdb
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\obj\Debug\net5.0\Student.Microservice.genruntimeconfig.cache
+C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\bin\Debug\net5.0\ref\Student.Microservice.dll
+C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\bin\Debug\net5.0\Student.Microservice.pdb
+C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\bin\Debug\net5.0\Student.Microservice.xml

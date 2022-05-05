@@ -1,8 +1,10 @@
 ﻿using Account.Microservice.Application;
 using Account.Microservice.Persistence;
 using Domain.Microservices.Core.Bus;
+using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using RabbitMq.Broker;
 using Student.Microservice.Application;
 using Student.Microservice.Persistence;
@@ -19,7 +21,12 @@ namespace Container.Microservices.IoC
         public static void RegisterServices(this IServiceCollection services, IConfiguration configuration)
         {
             // Domain bus
-            services.AddTransient<IEventBus, RabbitMQBus>();
+            services.AddSingleton<IEventBus, RabbitMQBus>(sp =>
+            {
+                var scopeFactory = sp.GetRequiredService<IServiceScopeFactory>();
+                return new RabbitMQBus(sp.GetService<IMediator>(), scopeFactory);
+            });
+
 
             // Application Events, CQRS Features and Services etc.
             services.AddAccountApplication();

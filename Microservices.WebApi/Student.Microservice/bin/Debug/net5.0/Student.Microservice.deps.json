@@ -2135,6 +2135,7 @@
           "Domain.Microservices.Core": "1.0.0",
           "MediatR": "9.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
           "Newtonsoft.Json": "13.0.1",
           "RabbitMQ.Client": "6.2.4"
         },
