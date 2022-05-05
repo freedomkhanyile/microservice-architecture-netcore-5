@@ -85,3 +85,4 @@ C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Applica
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Application.Microservice\obj\Debug\net5.0\ref\Application.Microservice.dll
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Application.Microservice\obj\Debug\net5.0\Application.Microservice.pdb
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Application.Microservice\obj\Debug\net5.0\Application.Microservice.genruntimeconfig.cache
+C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Application.Microservice\obj\Debug\net5.0\Application.Microservice.csproj.AssemblyReference.cache

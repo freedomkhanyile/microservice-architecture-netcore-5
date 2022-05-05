@@ -12,5 +12,7 @@ namespace Student.Microservice.Persistence.Context
     {
         public StudentDbContext(DbContextOptions<StudentDbContext> options) : base(options) { }
         public DbSet<Domain.Entities.Student> Students { get; set; }
+
+        public async Task<int> SaveChangesAsync() { return await base.SaveChangesAsync(); }
     }
 }

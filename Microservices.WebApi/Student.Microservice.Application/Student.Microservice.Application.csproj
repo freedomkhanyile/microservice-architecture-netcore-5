@@ -26,9 +26,6 @@
 	  <ProjectReference Include="..\Domain.Microservices.Core\Domain.Microservices.Core.csproj" />
 	  <ProjectReference Include="..\Student.Microservice.Domain\Student.Microservice.Domain.csproj" />
 	</ItemGroup>
-	<ItemGroup>
-	  <Folder Include="Features\Queries\" />
-	</ItemGroup>
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
 	</PropertyGroup>

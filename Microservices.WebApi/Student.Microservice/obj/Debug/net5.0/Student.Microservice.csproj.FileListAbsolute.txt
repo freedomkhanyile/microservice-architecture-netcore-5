@@ -99,7 +99,6 @@ C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\obj\Debug\net5.0\Student.Microservice.AssemblyInfoInputs.cache
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\obj\Debug\net5.0\Student.Microservice.AssemblyInfo.cs
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\obj\Debug\net5.0\Student.Microservice.csproj.CoreCompileInputs.cache
-C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\obj\Debug\net5.0\Student.Microservice.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\obj\Debug\net5.0\Student.Microservice.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\obj\Debug\net5.0\scopedcss\bundle\Student.Microservice.styles.css
 C:\Users\freedom.khanyile\source\demo\Microservices\Microservices.WebApi\Student.Microservice\obj\Debug\net5.0\staticwebassets\Student.Microservice.StaticWebAssets.Manifest.cache

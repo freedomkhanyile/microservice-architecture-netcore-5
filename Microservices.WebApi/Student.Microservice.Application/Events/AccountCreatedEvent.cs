@@ -1,10 +1,4 @@
-﻿using Domain.Microservices.Core.Bus;
-using Domain.Microservices.Core.Events;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain.Microservices.Core.Events;
 
 namespace Student.Microservice.Application.Events
 {

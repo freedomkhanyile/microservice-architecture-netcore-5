@@ -1,10 +1,6 @@
 ﻿using Domain.Microservices.Core.Bus;
 using MediatR;
 using Student.Microservice.Application.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Student.Microservice.Application.Services

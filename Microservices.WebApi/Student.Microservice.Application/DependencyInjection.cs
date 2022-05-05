@@ -5,12 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Student.Microservice.Application.EventHandlers;
 using Student.Microservice.Application.Events;
 using Student.Microservice.Application.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Student.Microservice.Application
 {

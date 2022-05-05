@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Student.Microservice.Application.ViewModel
+﻿namespace Student.Microservice.Application.ViewModel
 {
     public class CreatedAccountEventViewModel
     {
