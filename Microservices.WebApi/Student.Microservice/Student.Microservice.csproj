@@ -60,9 +60,6 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Applogs\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Container.Microservices.IoC\Container.Microservices.IoC.csproj" />
   </ItemGroup>
 
